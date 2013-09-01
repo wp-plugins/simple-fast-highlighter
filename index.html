@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="simplefasthighlighter.css" />
+</head>
+<body>
+
+<h1>Simple Fast Highlighter</h1>
+
+<h2>Examples</h2>
+
+<h3>Javascript</h3>
+<pre><code class="jsi">// Returns a string with all the object&#39;s properties.
+function dump_props(obj, obj_name) {
+   var result = &quot;&quot;;
+   for (var i in obj) {
+      result += obj_name + &quot;.&quot; + i + &quot; = &quot; + obj[i] + &quot;&lt;br&gt;&quot;;
+   }
+   result += &quot;&lt;hr&gt;&quot;;
+   return result;
+}</code></pre>
+
+<h3>PHP</h3>
+<pre><code class="phpi">&lt;?php
+$handle = fopen(&quot;http://www.example.com/&quot;, &quot;rb&quot;);
+$contents = &#39;&#39;;
+while (!feof($handle)) {
+  $contents .= fread($handle, 8192); // Read in chunks
+}
+fclose($handle);
+?&gt;</code></pre>
+
+<h3>VB.NET</h3>
+<pre><code class="vbi">Module MyModule
+
+  &#39; Example of events in VB.NET
+  Sub Main()
+
+    Dim c As Counter = New Counter(New Random().Next(10))
+    AddHandler c.ThresholdReached, AddressOf c_ThresholdReached
+
+    Console.WriteLine(&quot;press &#39;a&#39; key to increase total&quot;)
+    While Console.ReadKey(True).KeyChar = &quot;a&quot;
+      Console.WriteLine(&quot;adding one&quot;)
+      c.Add(1)
+    End While 
+
+  End Sub 
+
+  Sub c_ThresholdReached(sender As Object, e As EventArgs)
+
+    Console.WriteLine(&quot;The threshold was reached.&quot;)
+    Environment.Exit(0)
+
+  End Sub
+
+End Module</code></pre>
+
+<h3>C#</h3>
+<pre><code class="csharpi">class Program
+{
+  /* Example of events in C# */
+  static void Main(string[] args)
+  {
+    Counter c = new Counter(new Random().Next(10));
+    c.ThresholdReached += c_ThresholdReached;
+
+    Console.WriteLine(&quot;press &#39;a&#39; key to increase total&quot;);
+    while (Console.ReadKey(true).KeyChar == &#39;a&#39;)
+    {
+      Console.WriteLine(&quot;adding one&quot;);
+      c.Add(1);
+    }
+  }
+
+  static void c_ThresholdReached(object sender, EventArgs e)
+  {
+    Console.WriteLine(&quot;The threshold was reached.&quot;);
+    Environment.Exit(0); 
+  }
+}</code></pre>
+
+<h3>CSS</h3>
+<pre><code class="cssi">body {
+  background-color:#f0f0f0;
+  color:black;
+  padding:1em;
+}</code></pre>
+
+<h3>Python</h3>
+<pre><code class="pythoni">import threading
+from contextlib import contextmanager
+
+_tls = threading.local()
+
+@contextmanager
+def _nested():
+  _tls.level = getattr(_tls, &quot;level&quot;, 0) + 1
+  try:
+    yield &quot;   &quot; * _tls.level
+  finally:
+    _tls.level -= 1
+
+@contextmanager
+def _recursion_lock(obj):
+  if not hasattr(_tls, &quot;history&quot;):
+    _tls.history = []  # can&#39;t use set(), not all objects are hashable
+  if obj in _tls.history:
+    yield True
+    return
+  _tls.history.append(obj)
+  try:
+    yield False
+  finally:
+    _tls.history.pop(-1)</code></pre>
+    
+<h3>MySQL</h3>
+<pre><code class="sqli">SELECT * FROM my_table WHERE DATE(created) &lt; NOW();</code></pre>
+
+<script src="simplefasthighlighter.js"></script>
+<script src="simplefasthighlighter_lang.js"></script>
+<script>Highlighter.init();</script>
+
+</body>
+</html>
