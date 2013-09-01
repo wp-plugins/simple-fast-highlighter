@@ -32,6 +32,9 @@ Look for an example at my own site: http://www.michielvaneerd.nl
 
 == Changelog ==
 
+= 0.8.3 =
+* Fixed filenames in plugin file.
+
 = 0.8.2 =
 * Renamed files to match plugin name.
 

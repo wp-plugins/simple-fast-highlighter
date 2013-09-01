@@ -3,7 +3,7 @@
 /*
 Plugin Name: Simple Fast Highlighter
 Description: Fast syntax highlighter written in Javascript.
-Version: 0.8.2
+Version: 0.8.3
 Author: Michiel van Eerd
 Author URI: http://www.michielvaneerd.nl
 License: GPL2
@@ -11,15 +11,15 @@ License: GPL2
 
 function simplefasthighlighter_scripts() {
   wp_enqueue_style('simplefasthighlightercss',
-    plugins_url('simplefasthighlighter.css', __FILE__));
+    plugins_url('simple-fast-highlighter.css', __FILE__));
   wp_enqueue_script('simplefasthighlighterjs',
-    plugins_url('simplefasthighlighter.js', __FILE__),
+    plugins_url('simple-fast-highlighter.js', __FILE__),
     array(), false, true);
   wp_enqueue_script('simplefasthighlighterjslang',
-    plugins_url('simplefasthighlighter_lang.js', __FILE__),
+    plugins_url('simple-fast-highlighter_lang.js', __FILE__),
     array(), false, true);
   wp_enqueue_script('simplefasthighlighterjsinit',
-    plugins_url('simplefasthighlighter_init.js', __FILE__),
+    plugins_url('simple-fast-highlighter_init.js', __FILE__),
     array(), false, true);
 }
 add_action('wp_enqueue_scripts', 'simplefasthighlighter_scripts');
