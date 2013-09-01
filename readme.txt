@@ -32,6 +32,9 @@ Look for an example at my own site: http://www.michielvaneerd.nl
 
 == Changelog ==
 
+= 0.8.2 =
+* Renamed files to match plugin name.
+
 = 0.8.1 =
 * Add more info to README file.
 * Added a index.html file as an example.

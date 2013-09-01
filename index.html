@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<link rel="stylesheet" href="simplefasthighlighter.css" />
+<link rel="stylesheet" href="simple-fast-highlighter.css" />
 </head>
 <body>
 
@@ -11,7 +11,7 @@
 <h2>Examples</h2>
 
 <h3>Javascript</h3>
-<pre><code class="jsi">// Returns a string with all the object&#39;s properties.
+<pre><code class="js">// Returns a string with all the object&#39;s properties.
 function dump_props(obj, obj_name) {
    var result = &quot;&quot;;
    for (var i in obj) {
@@ -22,7 +22,7 @@ function dump_props(obj, obj_name) {
 }</code></pre>
 
 <h3>PHP</h3>
-<pre><code class="phpi">&lt;?php
+<pre><code class="php">&lt;?php
 $handle = fopen(&quot;http://www.example.com/&quot;, &quot;rb&quot;);
 $contents = &#39;&#39;;
 while (!feof($handle)) {
@@ -32,7 +32,7 @@ fclose($handle);
 ?&gt;</code></pre>
 
 <h3>VB.NET</h3>
-<pre><code class="vbi">Module MyModule
+<pre><code class="vb">Module MyModule
 
   &#39; Example of events in VB.NET
   Sub Main()
@@ -58,7 +58,7 @@ fclose($handle);
 End Module</code></pre>
 
 <h3>C#</h3>
-<pre><code class="csharpi">class Program
+<pre><code class="csharp">class Program
 {
   /* Example of events in C# */
   static void Main(string[] args)
@@ -82,14 +82,14 @@ End Module</code></pre>
 }</code></pre>
 
 <h3>CSS</h3>
-<pre><code class="cssi">body {
+<pre><code class="css">body {
   background-color:#f0f0f0;
   color:black;
   padding:1em;
 }</code></pre>
 
 <h3>Python</h3>
-<pre><code class="pythoni">import threading
+<pre><code class="python">import threading
 from contextlib import contextmanager
 
 _tls = threading.local()
@@ -116,10 +116,10 @@ def _recursion_lock(obj):
     _tls.history.pop(-1)</code></pre>
     
 <h3>MySQL</h3>
-<pre><code class="sqli">SELECT * FROM my_table WHERE DATE(created) &lt; NOW();</code></pre>
+<pre><code class="sql">SELECT * FROM my_table WHERE DATE(created) &lt; NOW();</code></pre>
 
-<script src="simplefasthighlighter.js"></script>
-<script src="simplefasthighlighter_lang.js"></script>
+<script src="simple-fast-highlighter.js"></script>
+<script src="simple-fast-highlighter_lang.js"></script>
 <script>Highlighter.init();</script>
 
 </body>
