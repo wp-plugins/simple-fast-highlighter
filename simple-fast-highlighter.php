@@ -3,7 +3,7 @@
 /*
 Plugin Name: Simple Fast Highlighter
 Description: Fast syntax highlighter written in Javascript.
-Version: 0.8.1
+Version: 0.8.2
 Author: Michiel van Eerd
 Author URI: http://www.michielvaneerd.nl
 License: GPL2
