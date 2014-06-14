@@ -32,6 +32,9 @@ Look for an example at my own site: http://www.michielvaneerd.nl
 
 == Changelog ==
 
+= 0.9.2 =
+* Updated version also in main PHP file
+
 = 0.9.1 =
 * Updated the tested up to
 
