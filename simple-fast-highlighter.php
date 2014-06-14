@@ -3,7 +3,7 @@
 /*
 Plugin Name: Simple Fast Highlighter
 Description: Fast syntax highlighter written in Javascript.
-Version: 0.8.3
+Version: 0.9.3
 Author: Michiel van Eerd
 Author URI: http://www.michielvaneerd.nl
 License: GPL2
@@ -50,6 +50,11 @@ function simplefasthighlighter_mce_before_init_insert_formats($init_array) {
         'title' => 'CSS',
         'selector' => 'code',
         'classes' => 'css'
+      ),
+      array(
+        'title' => 'Java',
+        'selector' => 'code',
+        'classes' => 'java'
       ),
       array(
         'title' => 'Javascript',
