@@ -32,6 +32,9 @@ Look for an example at my own site: http://www.michielvaneerd.nl
 
 == Changelog ==
 
+= 0.9.3 =
+* Added Java also to the editor select box
+
 = 0.9.2 =
 * Updated version also in main PHP file
 
