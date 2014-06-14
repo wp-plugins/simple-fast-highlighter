@@ -32,6 +32,10 @@ Look for an example at my own site: http://www.michielvaneerd.nl
 
 == Changelog ==
 
+= 0.9 =
+* Added Java language.
+* Tested up to 3.9.1
+
 = 0.8.3 =
 * Fixed filenames in plugin file.
 

@@ -21,6 +21,14 @@
     operator : global.Highlighter.copyShallow(Language.defaults.operator, [])
   };
 
+  Language.java = {
+    comment : Language.defaults.comment,
+    quote : Language.defaults.quote,
+    escape : Language.defaults.escape,
+    keyword : ["@Override", "abstract", "assert", "boolean", "break", "byte", "case", "catch", "char", "class", "const", "continue", "default", "do", "double", "else", "enum", "extends", "final", "finally", "float", "for", "goto", "if", "implements", "import", "instanceof", "int", "interface", "long", "native", "new", "null", "package", "private", "protected", "public", "return", "short", "static", "strictfp", "super", "switch", "this", "throw", "throws", "transient", "try", "void", "volatile", "while"],
+    operator : global.Highlighter.copyShallow(Language.defaults.operator, [])
+  };
+
   Language.c = {
     comment : Language.defaults.comment,
     quote : Language.defaults.quote,
