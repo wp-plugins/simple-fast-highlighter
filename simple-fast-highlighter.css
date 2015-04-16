@@ -14,7 +14,7 @@ span.sfhoperator {
   color:#A67F59;
 }
 
-code.simplefasthighlighted {
+pre.simplefasthighlighted , code.simplefasthighlighted {
   font-family:Consolas, "Courier New";
   color:black;
 }

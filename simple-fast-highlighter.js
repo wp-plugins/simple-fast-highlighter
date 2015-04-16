@@ -1,10 +1,10 @@
 (function(global) {
-  
-  var Highlighter = global.Highlighter = function(code, lang) {
-    this.code = code;
+
+  var Highlighter = global.Highlighter = function(el, lang) {
+    this.el = el;
     this.lang = lang;
   };
-  
+
   var Language = Highlighter.Language = {
     defaults : {
       comment : {
@@ -17,21 +17,21 @@
         "&", "|", "!", "?", "[", "]", "/", "%", "^", ":", "~"]
     }
   };
-  
+
   Highlighter.copyShallow = function(src, dest) {
     for (var key in src) {
       dest[key] = src[key];
     }
     return dest;
   };
-  
+
   var ltReg = /</g,
       validKeywordReg = /[a-zA-Z\-_]/;
-  
+
   var replaceEntities = function(s) {
     return s.replace(ltReg, "&lt;");
   };
-  
+
   Highlighter.prototype.handleQuote = function(line, startIndex, quote) {
     var i = startIndex, escaped = false;
     if (quote) {
@@ -52,12 +52,12 @@
     }
     return i;
   };
-  
+
   // single is makkelijk: tot einde van de line.
   Highlighter.prototype.handleSingleComment = function(line, startIndex) {
     return line.length - 1;
   };
-  
+
   Highlighter.prototype.handleMultiComment = function(line, startIndex) {
     this.activeMultiComment = true;
     var i = startIndex + 1, commentChars = [];
@@ -76,7 +76,7 @@
     }
     return i;
   };
-  
+
   Highlighter.prototype.handleKeyword = function(keyword, newLine) {
     if (this.lang.keyword.indexOf(keyword) > -1) {
       newLine.push("<span class='sfhkeyword'>" + replaceEntities(keyword) + "</span>");
@@ -94,15 +94,15 @@
       newLine.push(operators.join(""));
     }
   };
-  
+
   Highlighter.prototype.handleLine = function(line) {
 
     var i, newLine = [], c, endIndex, keywordChars = [],
       commentChars = [], tmp;
     for (i = 0; i < line.length; i++) {
-      
+
       c = line.charAt(i);
-      
+
       // Quote?
       if (this.activeQuote || this.lang.quote.indexOf(c) > -1) {
         endIndex = this.handleQuote(line, i, this.activeQuote ? null : c);
@@ -111,8 +111,8 @@
         i = endIndex;
         continue;
       }
-      
-      // Comment?      
+
+      // Comment?
       if (this.activeMultiComment
         || (this.lang.comment.single && c == this.lang.comment.single.charAt(commentChars.length))
         || (this.lang.comment.multi && c == this.lang.comment.multi[0].charAt(commentChars.length))) {
@@ -139,7 +139,7 @@
       } else {
         commentChars = [];
       }
-      
+
       // Keyword?
       if (validKeywordReg.test(c)) {
         keywordChars.push(c);
@@ -150,7 +150,7 @@
         keywordChars = [];
         this.handleKeyword(keyword, newLine);
       }
-      
+
       // Operator?
       if (this.lang.operator.indexOf(c) > -1) {
         newLine.push("<span class='sfhoperator'>" + replaceEntities(c) + "</span>");
@@ -158,35 +158,34 @@
         newLine.push(replaceEntities(c));
       }
     }
-    
+
     // Hier kan nog een keywordChars zijn...
     if (keywordChars.length > 0) {
       this.handleKeyword(keywordChars.join(""), newLine);
     }
-    
+
     return newLine.join("");
   };
-  
+
   Highlighter.prototype.highlight = function() {
-    var oldLines = this.code.textContent.split("\n"),
+    var oldLines = this.el.textContent.split("\n"),
         newLines = [];
     oldLines.forEach(function(oldLine) {
       newLines.push(this.handleLine(oldLine));
     }, this);
-    this.code.className += " simplefasthighlighted";
-    this.code.innerHTML = newLines.join("\n");
+    this.el.className += " simplefasthighlighted";
+    this.el.innerHTML = newLines.join("\n");
   };
-  
+
   Highlighter.init = function() {
-    var codes = document.getElementsByTagName("code"),
-        highlighter;
-    Array.prototype.forEach.call(codes, function(code) {
-      if (code.className in Language) {
-        highlighter = new Highlighter(code,
-          Language[code.className]);
+    var elements = document.querySelectorAll("code, pre"), highlighter;
+    Array.prototype.forEach.call(elements, function(el) {
+      if (el.className in Language) {
+        highlighter = new Highlighter(el,
+          Language[el.className]);
         highlighter.highlight();
       }
     });
   };
-  
+
 }(this));

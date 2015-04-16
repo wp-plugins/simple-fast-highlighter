@@ -3,7 +3,7 @@
 /*
 Plugin Name: Simple Fast Highlighter
 Description: Fast syntax highlighter written in Javascript.
-Version: 0.9.3
+Version: 1.0.0
 Author: Michiel van Eerd
 Author URI: http://www.michielvaneerd.nl
 License: GPL2
@@ -24,8 +24,15 @@ function simplefasthighlighter_scripts() {
 }
 add_action('wp_enqueue_scripts', 'simplefasthighlighter_scripts');
 
+function simplefasthighlighter_mce_external_plugins($plugins) {
+  $plugins['simplefasthighlighter_code_button'] = plugins_url('simplefasthighlighter_code_button.js', __FILE__);
+  return $plugins;
+}
+add_filter('mce_external_plugins', 'simplefasthighlighter_mce_external_plugins');
+
 function simplefasthighlighter_mce_buttons_2($buttons) {
 	array_unshift($buttons, 'styleselect');
+  $buttons[] = 'simplefasthighlighter_code_button';
 	return $buttons;
 }
 add_filter('mce_buttons_2', 'simplefasthighlighter_mce_buttons_2');
@@ -38,47 +45,47 @@ function simplefasthighlighter_mce_before_init_insert_formats($init_array) {
       ),
       array(
         'title' => 'C',
-        'selector' => 'code',
+        'selector' => 'pre, code',
         'classes' => 'c'
       ),
       array(
         'title' => 'C#',
-        'selector' => 'code',
+        'selector' => 'pre, code',
         'classes' => 'csharp'
       ),
       array(
         'title' => 'CSS',
-        'selector' => 'code',
+        'selector' => 'pre, code',
         'classes' => 'css'
       ),
       array(
         'title' => 'Java',
-        'selector' => 'code',
+        'selector' => 'pre, code',
         'classes' => 'java'
       ),
       array(
         'title' => 'Javascript',
-        'selector' => 'code',
+        'selector' => 'pre, code',
         'classes' => 'js'
       ),
       array(
         'title' => 'PHP',
-        'selector' => 'code',
+        'selector' => 'pre, code',
         'classes' => 'php'
       ),
       array(
         'title' => 'Python',
-        'selector' => 'code',
+        'selector' => 'pre, code',
         'classes' => 'python'
       ),
       array(
         'title' => 'SQL',
-        'selector' => 'code',
+        'selector' => 'pre, code',
         'classes' => 'sql'
       ),
       array(
         'title' => 'VB.NET',
-        'selector' => 'code',
+        'selector' => 'pre, code',
         'classes' => 'vb'
       )
     );

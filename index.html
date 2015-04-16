@@ -21,6 +21,19 @@ function dump_props(obj, obj_name) {
    return result;
 }</code></pre>
 
+<p>Or you can do inline code like <code class="js">addEventListener(&quot;click&quot;, callback)</code> or <code class="js">setTimeout(myFunc, 2000)</code></p>
+
+<p>Or only a PRE tag:</p>
+<pre class="js">// Returns a string with all the object&#39;s properties.
+function dump_props(obj, obj_name) {
+   var result = &quot;&quot;;
+   for (var i in obj) {
+      result += obj_name + &quot;.&quot; + i + &quot; = &quot; + obj[i] + &quot;&lt;br&gt;&quot;;
+   }
+   result += &quot;&lt;hr&gt;&quot;;
+   return result;
+}</pre>
+
 <h3>PHP</h3>
 <pre><code class="php">&lt;?php
 $handle = fopen(&quot;http://www.example.com/&quot;, &quot;rb&quot;);
@@ -44,9 +57,9 @@ fclose($handle);
     While Console.ReadKey(True).KeyChar = &quot;a&quot;
       Console.WriteLine(&quot;adding one&quot;)
       c.Add(1)
-    End While 
+    End While
 
-  End Sub 
+  End Sub
 
   Sub c_ThresholdReached(sender As Object, e As EventArgs)
 
@@ -77,7 +90,7 @@ End Module</code></pre>
   static void c_ThresholdReached(object sender, EventArgs e)
   {
     Console.WriteLine(&quot;The threshold was reached.&quot;);
-    Environment.Exit(0); 
+    Environment.Exit(0);
   }
 }</code></pre>
 
@@ -114,7 +127,7 @@ def _recursion_lock(obj):
     yield False
   finally:
     _tls.history.pop(-1)</code></pre>
-    
+
 <h3>MySQL</h3>
 <pre><code class="sql">SELECT * FROM my_table WHERE DATE(created) &lt; NOW();</code></pre>
 
