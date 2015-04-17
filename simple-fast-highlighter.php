@@ -31,18 +31,18 @@ function simplefasthighlighter_mce_external_plugins($plugins) {
 add_filter('mce_external_plugins', 'simplefasthighlighter_mce_external_plugins');
 
 function simplefasthighlighter_mce_buttons_2($buttons) {
-	array_unshift($buttons, 'styleselect');
-  $buttons[] = 'simplefasthighlighter_code_button';
+  //array_unshift($buttons, 'simplefasthighlighter_code_button');
+  array_unshift($buttons, 'styleselect', 'simplefasthighlighter_code_button');
 	return $buttons;
 }
 add_filter('mce_buttons_2', 'simplefasthighlighter_mce_buttons_2');
 
 function simplefasthighlighter_mce_before_init_insert_formats($init_array) {
     $style_formats = array(
-      array(
-        'title' => "Code",
-        'inline' => "code"
-      ),
+      //array(
+      //  'title' => "Code",
+      //  'inline' => "code"
+      //),
       array(
         'title' => 'C',
         'selector' => 'pre, code',
