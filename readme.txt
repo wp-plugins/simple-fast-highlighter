@@ -32,6 +32,10 @@ Look for an example at my own site: http://www.michielvaneerd.nl
 
 == Changelog ==
 
+= 1.0.1 =
+* Added a code button
+* Now you can also add the language classes directly to PRE tags
+
 = 0.9.3 =
 * Added Java also to the editor select box
 
