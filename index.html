@@ -10,29 +10,21 @@
 
 <h2>Examples</h2>
 
-<h3>Javascript</h3>
+<h3>Javascript - including some es6 features like template strings</h3>
 <pre><code class="js">// Returns a string with all the object&#39;s properties.
 function dump_props(obj, obj_name) {
-   var result = &quot;&quot;;
-   for (var i in obj) {
-      result += obj_name + &quot;.&quot; + i + &quot; = &quot; + obj[i] + &quot;&lt;br&gt;&quot;;
-   }
-   result += &quot;&lt;hr&gt;&quot;;
-   return result;
+  var result = &quot;&quot;;
+  var s = "Template";
+  var s = `A ${s} string
+    can be multiline!`;
+  for (var i in obj) {
+    result += obj_name + &quot;.&quot; + i + &quot; = &quot; + obj[i] + &quot;&lt;br&gt;&quot;;
+  }
+  result += &quot;&lt;hr&gt;&quot;;
+  return result;
 }</code></pre>
 
 <p>Or you can do inline code like <code class="js">addEventListener(&quot;click&quot;, callback)</code> or <code class="js">setTimeout(myFunc, 2000)</code></p>
-
-<p>Or only a PRE tag:</p>
-<pre class="js">// Returns a string with all the object&#39;s properties.
-function dump_props(obj, obj_name) {
-   var result = &quot;&quot;;
-   for (var i in obj) {
-      result += obj_name + &quot;.&quot; + i + &quot; = &quot; + obj[i] + &quot;&lt;br&gt;&quot;;
-   }
-   result += &quot;&lt;hr&gt;&quot;;
-   return result;
-}</pre>
 
 <h3>PHP</h3>
 <pre><code class="php">&lt;?php

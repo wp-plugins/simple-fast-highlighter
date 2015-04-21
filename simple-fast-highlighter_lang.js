@@ -1,7 +1,7 @@
 (function(global) {
 
   var Language = global.Highlighter.Language;
-  
+
   Language.sql = {
     comment : {
       single : "#",
@@ -12,7 +12,7 @@
     keyword : ["ADD", "ALTER", "AND", "AS", "COLUMN", "CREATE", "CURDATE", "DATE", "DATABASE", "DELETE", "DESCRIBE", "DISTINCT", "DO", "DROP", "EXPLAIN", "FROM", "GROUP BY", "HANDLER", "INDEX", "INSERT", "INTO", "LEFT", "JOIN", "LIMIT", "NOW", "ON", "OPTIMIZE", "ORDER BY", "RENAME", "REPLACE", "SELECT", "SET", "SHOW", "TABLE", "UPDATE", "USE", "WHERE"],
     operator : ["<", ">", "=", "(", ")", "*", ";", "!", ","]
   };
-    
+
   Language.csharp = {
     comment : Language.defaults.comment,
     quote : Language.defaults.quote,
@@ -47,12 +47,12 @@
 
   Language.js = {
     comment : Language.defaults.comment,
-    quote : Language.defaults.quote,
+    quote : ["\"", "'", "`"],
     escape : Language.defaults.escape,
-    keyword : ["Array", "Boolean", "break", "case", "catch", "continue", "Date", "delete", "do", "else", "Error", "false", "for", "Function", "function", "if", "in", "Infinity", "Math", "NaN", "new", "null", "Number", "Object", "RegExp", "return", "String", "switch", "this", "throw", "true", "try", "undefined", "var", "while"],
+    keyword : ["Array", "ArrayBuffer", "Boolean", "break", "case", "catch", "class", "const", "continue", "DataView", "Date", "delete", "do", "else", "Error", "extends", "false", "Float32Array", "Float64Array", "for", "Function", "function", "if", "in", "Infinity", "Int8Array", "Int16Array", "Int32Array", "let", "Map", "Math", "NaN", "new", "null", "Number", "Object", "of", "Promise", "Proxy", "RegExp", "return", "Set", "static", "String", "switch", "Symbol", "this", "throw", "true", "try", "Uint8Array", "Uint8ClampedArray", "Uint16Array", "Uint32Array", "undefined", "var", "yield", "WeakMap", "WeakSet", "while"],
     operator : global.Highlighter.copyShallow(Language.defaults.operator, [])
   };
-    
+
   Language.python = {
     comment : {
       single : "#",

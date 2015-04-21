@@ -32,6 +32,9 @@ Look for an example at my own site: http://www.michielvaneerd.nl
 
 == Changelog ==
 
+= 1.0.3 =
+* Added some es6 features to Javascript language object
+
 = 1.0.2 =
 * Removed some default styles like font and padding
 
