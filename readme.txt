@@ -32,6 +32,9 @@ Look for an example at my own site: http://www.michielvaneerd.nl
 
 == Changelog ==
 
+= 1.0.2 =
+* Removed some default styles like font and padding
+
 = 1.0.1 =
 * Added a code button
 * Now you can also add the language classes directly to PRE tags

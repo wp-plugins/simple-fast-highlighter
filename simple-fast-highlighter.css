@@ -14,13 +14,3 @@ span.sfhoperator {
   color:#A67F59;
 }
 
-pre.simplefasthighlighted , code.simplefasthighlighted {
-  font-family:Consolas, "Courier New";
-  color:black;
-}
-
-pre {
-  background-color:#F5F2F0;
-  border:1px solid #e0e0e0;
-  padding:1em;
-}
