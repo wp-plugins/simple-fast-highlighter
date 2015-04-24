@@ -19,16 +19,7 @@ easily add other ones.
 
 == Installation ==
 
-1. Upload the plugin to the `/wp-content/plugins/` directory
-2. Activate the plugin through the 'Plugins' menu in WordPress
-
-= Usage =
-
-1. Select the code inside a PRE tag.
-2. Select the _Code_ item in the select box, this will surround the selected area with a CODE tag.
-3. Then select the language, like Javascript or PHP.
-
-Look for an example at my own site: http://www.michielvaneerd.nl
+See http://michielvaneerd.github.io/simplefasthighlighter/
 
 == Changelog ==
 
