@@ -26,7 +26,7 @@
   };
 
   var ltReg = /</g,
-      validKeywordReg = /[a-zA-Z\-_]/;
+      validKeywordReg = /[@a-zA-Z\-_]/;
 
   var replaceEntities = function(s) {
     return s.replace(ltReg, "&lt;");
