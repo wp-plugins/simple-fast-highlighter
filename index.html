@@ -64,15 +64,41 @@
                 </div>
 
                 <h3>Standalone</h3>
-                <p>Download the <a href="simple-fast-highlighter.js">simple-fast-highlighter.js</a>,
-                <a href="simple-fast-highlighter_lang.js">simple-fast-highlighter_lang.js</a>
-                and <a href="simple-fast-highlighter.css">simple-fast-highlighter.css</a> files
-                and add these to your HTML file. Now just call:</p>
-                <pre class="js">Highlighter.init();</pre>
+                <ul>
+                  <li>Download the <a href="simple-fast-highlighter.js">script</a>,
+                <a href="simple-fast-highlighter_lang.js">language file</a>
+                and <a href="simple-fast-highlighter.css">stylesheet</a> and add these to your HTML file.</li>
+                  <li>Add the language classes to each <code>PRE</code> and <code>CODE</code>
+                  element you want to have highlighted. The classes are the keys of the <code class="js">Highlighter.Language</code>
+                  object in the <a href="simple-fast-highlighter_lang.js">language file</a>.</li>
+                  <li>Now just call <code class="js">Highlighter.init();</code></li></ul>
+                
+                
 
                 <h3>Extend</h3>
                 <p>You can simply add other languages by extending the <code class="js">Highlighter.Language</code> object.
-                See the <a href="simple-fast-highlighter_lang.js">simple-fast-highlighter_lang.js</a> for examples.</p>
+                See the <a href="simple-fast-highlighter_lang.js">language file</a> for examples.</p>
+                
+                <h3>Change style</h3>
+                <p>There are 4 classes defined in the <a href="simple-fast-highlighter.css">stylesheet</a>.
+                If you want to change the styles for all languages, just edit it in there or overrule them with your
+                own css file.</p>
+                <p>If you want to have a different style for a specific language, just add the language class before the 4 highlight classes.
+                For example to style PHP different:</p>
+                <pre class="css">.php span.sfhkeyword {
+  color:blue;
+  
+.php span.sfhquote {
+  color:green;
+}
+
+.php span.sfhcomment {
+  color:gray;
+}
+
+.php span.sfhoperator {
+  color:red;
+}</pre>
 
                 <h2 class="content-subhead">Limitations</h2>
                 <ul>
