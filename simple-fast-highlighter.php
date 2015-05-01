@@ -3,7 +3,7 @@
 /*
 Plugin Name: Simple Fast Highlighter
 Description: Fast syntax highlighter written in Javascript.
-Version: 1.0.3
+Version: 1.0.4
 Author: Michiel van Eerd
 Author URI: http://www.michielvaneerd.nl
 Plugin URI: http://michielvaneerd.github.io/simplefasthighlighter/

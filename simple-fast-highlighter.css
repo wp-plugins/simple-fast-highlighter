@@ -13,3 +13,7 @@ span.sfhcomment {
 span.sfhoperator {
   color:#A67F59;
 }
+
+span.sfhregexp {
+  color:orange;
+}

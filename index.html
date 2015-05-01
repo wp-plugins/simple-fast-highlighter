@@ -11,31 +11,14 @@
 </head>
 <body>
 
-  <div class="header">
-      <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
-          <a class="pure-menu-heading" href="http://michielvaneerd.github.io/simplefasthighlighter/">Simple Fast Highlighter</a>
 
-          <ul class="pure-menu-list">
-              <li class="pure-menu-item pure-menu-selected"><a href="http://blog.michielvaneerd.nl" class="pure-menu-link">Blog</a></li>
-              <li class="pure-menu-item"><a href="https://github.com/michielvaneerd/simplefasthighlighter" class="pure-menu-link">Github</a></li>
-              <li class="pure-menu-item"><a href="https://wordpress.org/plugins/simple-fast-highlighter/" class="pure-menu-link">Wordpress plugin</a></li>
-          </ul>
-      </div>
-  </div>
-
-  <div class="splash-container">
-      <div class="splash">
-          <h1 class="splash-head">Simple Fast Highlighter</h1>
-          <p class="splash-subhead">
-              A syntax highlighter plugin for Wordpress
-          </p>
-          <p>
-              <a href="#getstarted" class="pure-button pure-button-primary">Get Started</a>
-          </p>
-      </div>
-  </div>
+  
 
   <div id="getstarted" class="content-wrapper">
+  
+      <h1>Simple Fast Highlighter</h1>
+      <p>A <a href="https://wordpress.org/plugins/simple-fast-highlighter/">Wordpress plugin</a> or standalone syntax highlighter written in Javascript.</p>
+  
       <div class="content">
           <!--<h2 class="content-head is-center">Excepteur sint occaecat cupidatat.</h2>-->
 
@@ -117,7 +100,11 @@ var simpleCopy = function(src, dest) {
 };
 
 var replaceEntities = function(s) {
+  if (/\d+/.test(s) &amp;&amp; /\w+/gi.test(s)) {
+    console.log(&quot;Found it!&quot;);
+  }
   return s.replace(/&lt;/g, &quot;&amp;amp;lt;&quot;);
+  return s.replace(/hoi[\w]+/g, &quot;-&quot;);
 };</pre>
 
                 <h3>Java</h3>

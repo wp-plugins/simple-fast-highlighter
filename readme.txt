@@ -2,7 +2,7 @@
 Contributors: michielve
 Tags: highlighter, highlight, code, sourcecode, syntax
 Requires at least: 3.0.1
-Tested up to: 4.2
+Tested up to: 4.2.1
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -22,15 +22,20 @@ easily add other ones.
 1. Upload the plugin to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
 
+See also http://michielvaneerd.github.io/simplefasthighlighter/
+
 = Usage =
 
 1. Select the code inside a PRE tag.
 2. Select the _Code_ item in the select box, this will surround the selected area with a CODE tag.
 3. Then select the language, like Javascript or PHP.
 
-Look for an example at my own site: http://www.michielvaneerd.nl
+Look for an example at my blog: http://blog.michielvaneerd.nl and http://michielvaneerd.github.io/simplefasthighlighter/
 
 == Changelog ==
+
+= 1.0.4 =
+* Added custom handling to Language objects, for example to highlight Javascript regular expressions
 
 = 1.0.3 =
 * Added some es6 features to Javascript language object
